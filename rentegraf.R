@@ -46,8 +46,7 @@ matching <- data.frame(Period = unique(rent_stat$Period),
 # Match with rent_stat, calculate some stats, remove blank values only keeping those with values across curve
 
 rent_stat <- rent_stat %>% 
-  left_join(matching, by = "Period") %>%
-  group_by(DATES) 
+  left_join(matching, by = "Period") 
   
 
 # plot yields since the beginning
